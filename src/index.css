@@ -1,0 +1,49 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+.div-id {
+  background-color: white;
+}
+
+
+.bg-pic {
+  background-color: black;
+} 
+
+.div-pokemon {
+  background-color: rgb(214, 203, 198);
+  border: 2px solid black; 
+  align-items: center;
+  float: left;
+
+}
+
+.specs-pokemon {
+  list-style: none;
+  width: 96.84px;
+  height: 96.84px;
+  border: 2px solid black;
+  align-items: center;
+  
+}
+/* 
+.bg-poke {
+  background-color: white;
+  display: inline-block;
+} */
+
+.div-pokemon-specs {
+  background-color: white;
+}
