@@ -5,19 +5,19 @@ import "bootstrap/dist/css/bootstrap.min.css";
 // import React, {useState, useEffect} from 'react';
 
   
-  function FetchPokemonData({handlePokemon, pokemonPicture}) {
-    return (
-      <div className='App'>
-      <div className='token-pokemon'>
-        <div className='pikachu-top'>
-          <input className='input-field' type="text submit" placeholder="Insert Pokemon" onChange={handlePokemon} />
-        </div>
-        <button className='btn btn-danger button-color button-width text-dark fw-bolder'>Search</button>      
-        <div className='pokeball-bottom'></div>
-      </div>
-    </div>
-    )
-  }
+  function FetchPokemonData() {
+    // fetch(`https://pokeapi.co/api/v2/pokemon/${searchedPokemon}`)
+    // .then(response =>  response.json())
+    // .then(data => {
+    //   // console.log(data.types[0].type.name)
+    //   // console.log(pokemonData.cries.legacy)
+    //   setpokemonData(data)
+    //   setintroductoryAudio(pokemonData.cries.legacy)
+    // })
+    // .catch(error => {
+    //   console.error(error);
+    // })
+}
 
 
   export default FetchPokemonData;

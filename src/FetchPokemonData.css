@@ -42,7 +42,7 @@
   }
   
   .pikachu-top {
-    background-size: 25%;
+    background-size: 15%;
     background-position: top;
     background-repeat: no-repeat;
     background-image: url(./pictures/pikachu-input.png);
@@ -51,8 +51,8 @@
   .pokeball-bottom {
     height: 65%;
     width: 100%;
-    background-size: 35%;
-    background-position: bottom;
+    background-size: 40%;
+    background-position: center;
     background-repeat: no-repeat;
     background-image: url(./pictures/pokeball.png);
   }
