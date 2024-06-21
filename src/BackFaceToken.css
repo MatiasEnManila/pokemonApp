@@ -1,0 +1,72 @@
+
+.rock {
+    background-image: url(./pictures/e-rock.png) ;
+  }
+  
+.fire {
+    background-image: url(./pictures/e-fire.png);
+  }
+
+.bug {
+    background-image: url(./pictures/e-bug.png);
+}
+
+.dark {
+    background-image: url(./pictures/e-dark.png);
+}
+
+.dragon {
+    background-image: url(./pictures/e-dragon.png);
+}
+
+.electric {
+    background-image: url(./pictures/e-electric.png);
+}
+
+.fairy {
+    background-image: url(./pictures/e-fairy.png);
+}
+
+.fighting {
+    background-image: url(./pictures/e-fighting.png);
+}
+
+.flying {
+    background-image: url(./pictures/e-flying.png);
+}
+
+.ghost {
+    background-image: url(./pictures/e-ghost.png);
+}
+
+.grass {
+    background-image: url(./pictures/e-grass.png);
+}
+
+.ground {
+    background-image: url(./pictures/e-ground.png);
+}
+
+.ice {
+    background-image: url(./pictures/e-ice.png);
+}
+
+.normal {
+    background-image: url(./pictures/e-normal.png);
+}
+
+.poison {
+    background-image: url(./pictures/e-poison.png);
+}
+
+.psychic {
+    background-image: url(./pictures/e-psychic.png);
+}
+
+.steel {
+    background-image: url(./pictures/e-steel.png);
+}
+
+.water {
+    background-image: url(./pictures/e-water.png);
+}

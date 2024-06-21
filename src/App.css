@@ -108,6 +108,7 @@ html body {
   background-position: center;
   background-repeat: no-repeat;
   background-image: url(./pictures/pokeball.png);
+  display: block;
 }
 
 .button-width {
@@ -185,13 +186,24 @@ html body {
 }
 
 
+.invalid-search {
+  color: red;
+}
 
 
+.pokemon-sound {
+  background-size: contain;
+  background-position: right;
+  background-repeat: no-repeat;
+  height: 30px;
+  width: 30px;
+  display: inline-block;
+  vertical-align: text-bottom;
+  margin-left: 10px;
+}
 
 
-/* "types": [
-    {
-      "slot": 1,
-      "type": {
-        "name": "fire",
-        "url": "https://pokeapi.co/api/v2/type/10/" */
+.title {
+  display: inline-block;
+  width: 50%;
+}
