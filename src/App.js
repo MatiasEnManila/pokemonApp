@@ -9,6 +9,7 @@ import FrontFaceToken from './FrontFaceToken';
 
 
 //TODO Add pokemon's audio, fix h1 + picture positioning,  Responsive    
+//TODO The Hydreigon problem - Ability needs fixing   
 
 function App() {
   const [pokemonData, setpokemonData] = useState('');
@@ -16,7 +17,6 @@ function App() {
   const [hasError, setHasError] = useState(false);
   const [introductoryAudio, setintroductoryAudio] = useState(null);
 
-  console.log(introductoryAudio);
 
   function searchPokemon (searchedPokemon) {
     if (searchedPokemon === '') return;
