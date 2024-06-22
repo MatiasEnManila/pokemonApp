@@ -1,124 +1,67 @@
-import { IS_REACT_LEGACY } from 'swr/_internal';
+// import { IS_REACT_LEGACY } from 'swr/_internal'; 
+import AudioPokemon from './AudioPokemon.js';
 import './App.js';
 import './BackFaceToken.css'
-import ditto from './pictures/ditto-boss.jpg';
 import { useState, useEffect } from 'react'; 
 
 
-function BackFaceToken({picture, name, type, weight, abilityOne, abilityTwo, goback, cry}) {
+//TODO map abilities
 
-  const assignBackspaceButton = () => {
-        document.addEventListener("keyup", function backSpaceKey(event) {
-          if (event.key === "Backspace") {
-            event.preventDefault();
-            document.removeEventListener("keyup", backSpaceKey);
-            goback();
-          }
-      });
-      }
-
-  useEffect(() => {
-    assignBackspaceButton();
-  }, []);
-
-
+function BackFaceToken({goback, pokemon}) {
   
-  let elementClassName = '';
+  const cryPokemon = new Audio(pokemon.cries.latest);
 
-  switch(type) {
-    case 'normal':
-    elementClassName = 'normal';
-    break;
-
-    case 'electric':
-      elementClassName = 'electric';
-    break;
-
-    case 'rock':
-      elementClassName = 'rock';
-    break;
-
-    case 'fire':
-      elementClassName = 'fire';
-    break;
-
-    case 'bug':
-      elementClassName = 'bug';
-    break;
-
-    case 'dark':
-      elementClassName = 'dark';
-    break;
-
-    case 'dragon':
-      elementClassName = 'dragon';
-    break;
-
-    case 'fairy':
-      elementClassName = 'fairy';
-    break;
-
-    case 'fighting':
-      elementClassName = 'fighting';
-    break;
-
-    case 'flying':
-      elementClassName = 'flying';
-    break;
-
-    case 'ghost':
-      elementClassName = 'ghost';
-    break;
-
-    case 'grass':
-      elementClassName = 'grass';
-    break;
-
-    case 'ground':
-      elementClassName = 'ground';
-    break;
-
-    case 'ice':
-      elementClassName = 'ice';
-    break;
-
-    case 'poison':
-      elementClassName = 'poison';
-    break;
-
-    case 'psychic':
-      elementClassName = 'psychic';
-    break;
-
-    case 'steel':
-      elementClassName = 'steel';
-    break;
-
-    case 'water':
-      elementClassName = 'water';
-    break;
-
+  const playPokemonCry = () => {
+    cryPokemon.play();
   }
 
+  let hasAbility = false
+
+  if (pokemon.abilities.length >= 2)  {
+    hasAbility = true;
+  }
+  
+  
+  const assignBackspaceButton = () => {
+    document.addEventListener("keyup", function backSpaceKey(event) {
+      if (event.key === "Backspace") {
+        event.preventDefault();
+        document.removeEventListener("keyup", backSpaceKey);
+        goback();
+      }
+    });
+  }
+    
+    useEffect(() => {
+      assignBackspaceButton();
+    }, []);
+    
+
+
+    
+  let elementClassName = ['rock', 'fire', 'bug', 'dark', 'dragon', 'electric', 'fairy', 'fighting', 'flying', 'ghost', 'grass', 'ground', 'ice', 'normal', 'poison', 'psychic', 'steel', 'water']
+    .includes(pokemon.types[0].type.name) //*
+    ? pokemon.types[0].type.name 
+    : '';
  
 
   return (
     <div className='App'>
       <div className='token-pokemon-back'>
         <div className='pokemon'>
-          {name == 'ditto' ? <img className='pokemon-picture' src={ditto}/> : <img className='pokemon-picture' src={picture}/>}
-          {/* <img className='pokemon-picture' src={picture}/> */}
+          <img className='pokemon-picture' src={pokemon.sprites.front_default}/>
         </div>
         <div>
-            
-              <h1 className='title'>{name}</h1>
-              <i className={'pokemon-sound ' + elementClassName}></i>
+              <h1 className='title'>{pokemon.name}</h1>
+              <i className={'pokemon-sound ' + elementClassName} onClick={playPokemonCry}>
+                {/* <AudioPokemon src={pokemon.cries.latest}/> */}
+              </i>
       
             <ul className='no-dots'>
-                <li><b>Type</b>: {type}</li>
-                <li><b>Weight</b>: {weight} lbs.</li>
-                <li><b>Ability 1:</b>: {abilityOne}</li>
-                <li><b>Ability 2: </b>: {abilityTwo}</li>
+                <li><b>Type</b>: {pokemon.types[0].type.name}</li>
+                <li><b>Weight</b>: {pokemon.weight} lbs.</li>
+                <li><b>Ability 1:</b>: {pokemon.abilities[0].ability.name}</li>
+                {hasAbility && <li><b>Ability 2:</b>: {pokemon.abilities[1].ability.name}</li>}
             </ul>
           <button className='btn btn-danger button-color-back button-width text-dark fw-bolder' onClick={goback}>Back</button>      
         </div>
