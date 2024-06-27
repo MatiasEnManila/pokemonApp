@@ -1,9 +1,10 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
+import pikachu from './pictures/pikachu-input.png'
 
-function FrontFaceToken({searchPokemon, hasError, setHasError}) {
-  //TODO invalid pokemon setTimeOut
+
+function FrontFaceToken({ searchPokemon, hasError, setHasError }) {
+
   const pokemonSearched = useRef('');
-
 
   const assignEnterKeyPokeball = () => {
     document.addEventListener("keyup", function enterKey(event) {
@@ -15,38 +16,40 @@ function FrontFaceToken({searchPokemon, hasError, setHasError}) {
     });
   }
 
+
   useEffect(() => {
     assignEnterKeyPokeball();
   }, []);
 
-  
+
   const handleInputChange = (event) => {
     pokemonSearched.current = event.target.value.toLowerCase();
     if (hasError) {
       setHasError(false);
-      assignEnterKeyPokeball();
+      // assignEnterKeyPokeball();
     }
   }
 
 
   return (
     <div className='App'>
-      <div className='token-pokemon-front'>
-        <div className='pikachu-top'>
-          <input 
-            className='input-field' 
-            type="text" 
-            placeholder="Insert Pokemon" 
-            onChange={handleInputChange} 
-          />
-          {hasError && <div id='invalid-pokemon' className='invalid-search'>Invalid pokemon</div>}
+      <div className='token-pokemon color-front'>
+        <div className="pikachu-picture-container">
+          <img className='pikachu-picture' src={pikachu} />
         </div>
-        <a>
-        </a>
-        <div type='button' id='pokeball' className='pokeball-bottom' onClick={() =>  searchPokemon(pokemonSearched)}></div>
+        <input
+          className='input-field'
+          type="text"
+          placeholder="Insert Pokemon"
+          onChange={handleInputChange}
+        />
+
+        {hasError && <div id='invalid-pokemon' className='invalid-search'>Invalid pokemon</div>}
+        <div type='button' id='pokeball' className='pokeball-bottom' onClick={() => searchPokemon(pokemonSearched.current)}></div>
+        <div className="bottom-logo"></div>
       </div>
     </div>
-      )
+  )
 }
 
 
