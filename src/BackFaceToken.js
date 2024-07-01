@@ -56,9 +56,9 @@ function BackFaceToken({ goback, pokemon }) {
                 <img className={'pokemon-sound ' + elementClassName} onClick={playPokemonCry}/>
             </div>
             <div className='pokemon-information'>
-              <li className='info-size'><b className='info-size'>Type</b>: {pokemon.types[0].type.name}</li>
-              <li className='info-size'><b className='info-size'>Weight</b>: {pokemon.weight} lbs.</li>
-              <li className='info-size'><b className='info-size'>Ability 1:</b>: {pokemon.abilities[0].ability.name}</li>
+              <li className='info-size'><b>Type</b>: {pokemon.types[0].type.name}</li>
+              <li className='info-size'><b>Weight</b>: {pokemon.weight} lbs.</li>
+              <li className='info-size'><b>Ability 1:</b>: {pokemon.abilities[0].ability.name}</li>
               {hasAbility && <li className='info-size'><b>Ability 2:</b>: {pokemon.abilities[1].ability.name}</li>}
             </div>
             <div className='div-button-back'>
