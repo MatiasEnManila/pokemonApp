@@ -48,16 +48,6 @@ html, body {
 
 
 
-
-
-/* @media (min-width: 601px) {
-  .token-pokemon {
-    width: 25%;
-    height: 85%;
-  }
-}  */
-
-
 .token-pokemon {  
   display: flex;
   flex-direction: column;
@@ -68,83 +58,6 @@ html, body {
   border: 5px solid #faeded; /* #FEFEDF; */
 }
 
-.input-field {
-  border-radius: 5px;
-  width: 90%;
-  height: 50px;
-}
-
-
-
-
-@media (max-width: 600px) { 
-  .token-pokemon {
-    width: 100%;
-    height: 100%;
-  }
-  .name-icon {
-    font-size: -webkit-xxx-large;
-  }
-
-  .info-size {
-    font-size: xx-large ;
-  }
-
-  .input-field {
-    height: 65px;
-  }
-}
-
-/* TODO max-width 600 backface font size change */
-/* TODO min-width 601 look like 900 backface font size change** not sure yet */
-
-/* LOOK roughly LIKE 900WIDTH */
-@media (min-width: 601px) { 
-  .token-pokemon {
-    width: 60%;
-    height: 75%;
-  }
-  .input-field {
-    margin-top: 10px;
-    height: 70px;
-  }
-}
-
-
-@media (min-width: 905px) { 
-  .token-pokemon {
-    width: 55%;
-    height: 80%;
-  }
-
-  .input-field {
-    height: 75px;
-  } 
-}
-
-@media (min-width: 1150px) { 
-  .token-pokemon {
-    width: 45%;
-    height: 90%;
-  }
-
-  .input-field {
-    height: 75px;
-  } 
-}
-
-
-/* SPECS 750px and beyond */
-/* TokenPokemon {
-  height: 75%
-}
-
-.input-field {
-    margin-top: 10px;
-    height: 75px;
-  }
-} 
-
 
 
 /* FRONTFACE */
@@ -152,9 +65,11 @@ html, body {
   background-color: #F0BA19; 
 }
 
+
 .pikachu-picture-container {
   object-fit: inherit ;
 }
+
 
 .pikachu-picture {
   object-fit: contain;
@@ -165,6 +80,12 @@ html, body {
   background-repeat: no-repeat;
 }
 
+
+.input-field {
+  border-radius: 5px;
+  width: 90%;
+  height: 50px;
+}
 
 .pokeball-bottom {
   height: 65%;
@@ -185,8 +106,6 @@ html, body {
 }
 
 
-
-
 ::placeholder {
   text-align: center;
 }
@@ -196,7 +115,6 @@ html, body {
 
 
 /* BACKFACE */
-
 .token-top-container {
   display: flex;
   align-items: center;
@@ -205,6 +123,7 @@ html, body {
   width: 100%;
   height: 50%;
 }
+
 
 .token-bottom-container {
   display: flex;
@@ -215,6 +134,7 @@ html, body {
   height: 100%;
   gap: 10px;
 }
+
 
 .pokemon-display {
   display: flex;
@@ -230,9 +150,8 @@ html, body {
 
 .color-back {
   background-color: rgb(197, 118, 118);
-
+  
 }
-
 
 
 .button-color.btn.btn-danger {
@@ -281,21 +200,12 @@ html, body {
   width: 100%;
 }
 
- 
-
-
 
 .pokemon-sound {
   height: 30px;
   width: 30px;
   border: 0;
-  /* object-fit: contain; */
   background-size: contain;
-  /* background-position: right;
-  background-repeat: no-repeat;
-  display: inline-block;
-  vertical-align: text-bottom;
-  margin-left: 10px; */
 }
 
 
@@ -307,7 +217,6 @@ html, body {
   width: 100%;
   column-gap: 5%;
 }
-
 
 
 .div-button-back {
@@ -324,7 +233,7 @@ html, body {
   align-items: center;
   font-size: 18px;
 }
- 
+
 .bottom-logo {
   background-repeat: no-repeat;
   background-size: contain;
@@ -333,4 +242,60 @@ html, body {
   margin-bottom: 10px;
 }
 
+
+
+
 /* <600px, 601px, 768px, 992px, 1200px */
+@media (max-width: 600px) { 
+  .token-pokemon {
+    width: 100%;
+    height: 100%;
+  }
+  .name-icon {
+    font-size: -webkit-xxx-large;
+  }
+
+  .info-size {
+    font-size: xx-large ;
+  }
+
+  .input-field {
+    height: 65px;
+  }
+}
+
+
+
+@media (min-width: 601px) { 
+  .token-pokemon {
+    width: 50%;
+    height: 75%;
+  }
+  .input-field {
+    margin-top: 10px;
+    height: 70px;
+  }
+}
+
+
+@media (min-width: 905px) { 
+  .token-pokemon {
+    width: 45%;
+    height: 80%;
+  }
+
+  .input-field {
+    height: 75px;
+  } 
+}
+
+@media (min-width: 1000px) { 
+  .token-pokemon {
+    width: 30%;
+    height: 90%;
+  }
+
+  .input-field {
+    height: 75px;
+  } 
+}
