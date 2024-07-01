@@ -9,8 +9,6 @@ import { useState } from 'react';
 import FrontFaceToken from './FrontFaceToken';
 
 
-//TODO Responsive not working, search middle input*   
-//TODO Pokeball not functioning properly  
 
 function App() {
   const [pokemonData, setpokemonData] = useState('');
