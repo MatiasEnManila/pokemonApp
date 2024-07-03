@@ -53,13 +53,13 @@ function BackFaceToken({ goback, pokemon }) {
         <div className='token-bottom-container'>
             <div className='div-title'>
               <h1 className='name-icon'>{pokemon.name}</h1>
-                <img className={'pokemon-sound ' + elementClassName} onClick={playPokemonCry}/>
+                <div className={'pokemon-sound ' + elementClassName} onClick={playPokemonCry}/>
             </div>
             <div className='pokemon-information'>
               <li className='info-size'><b>Type</b>: {pokemon.types[0].type.name}</li>
               <li className='info-size'><b>Weight</b>: {pokemon.weight} lbs.</li>
-              <li className='info-size'><b>Ability 1:</b>: {pokemon.abilities[0].ability.name}</li>
-              {hasAbility && <li className='info-size'><b>Ability 2:</b>: {pokemon.abilities[1].ability.name}</li>}
+              <li className='info-size'><b>Ability 1</b>: {pokemon.abilities[0].ability.name}</li>
+              {hasAbility && <li className='info-size'><b>Ability 2</b>: {pokemon.abilities[1].ability.name}</li>}
             </div>
             <div className='div-button-back'>
               <button className='btn btn-danger button-color-back button-width text-dark fw-bolder mt-1 mb-3' onClick={goback}>Back</button>

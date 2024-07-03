@@ -82,6 +82,7 @@ html, body {
 
 
 .input-field {
+  text-align: center;
   border-radius: 5px;
   width: 90%;
   height: 50px;
@@ -179,6 +180,7 @@ html, body {
 
 
 .invalid-search {
+  margin-top: 10px;
   color: red;
 }
 
@@ -202,10 +204,11 @@ html, body {
 
 
 .pokemon-sound {
-  height: 30px;
-  width: 30px;
+  height: 55%;
+  width: 50px;
   border: 0;
   background-size: contain;
+  background-repeat: no-repeat;
 }
 
 
@@ -231,7 +234,7 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 18px;
+  /* font-size: 18px; */
 }
 
 .bottom-logo {
@@ -246,6 +249,7 @@ html, body {
 
 
 /* <600px, 601px, 768px, 992px, 1200px */
+
 @media (max-width: 600px) { 
   .token-pokemon {
     width: 100%;
@@ -278,9 +282,21 @@ html, body {
 }
 
 
-@media (min-width: 905px) { 
+@media (min-width: 705px) { 
   .token-pokemon {
     width: 45%;
+    height: 70%;
+  }
+
+  .input-field {
+    height: 75px;
+  } 
+}
+
+
+@media (min-width: 1000px) { 
+  .token-pokemon {
+    width: 30%;
     height: 80%;
   }
 
@@ -289,10 +305,11 @@ html, body {
   } 
 }
 
-@media (min-width: 1000px) { 
+
+@media (min-width: 1550px) { 
   .token-pokemon {
-    width: 30%;
-    height: 90%;
+    width: 20%;
+    height: 70%;
   }
 
   .input-field {

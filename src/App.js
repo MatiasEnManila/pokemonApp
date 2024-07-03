@@ -9,6 +9,7 @@ import { useState } from 'react';
 import FrontFaceToken from './FrontFaceToken';
 
 
+// TODO enter key won't work after deleting characters (all after a 404 fetch)
 
 function App() {
   const [pokemonData, setpokemonData] = useState('');

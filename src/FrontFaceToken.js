@@ -38,13 +38,13 @@ function FrontFaceToken({ searchPokemon, hasError, setHasError }) {
           <img className='pikachu-picture' src={pikachu} />
         </div>
         <input
-          className='input-field'
+          className='input-field fs-4'
           type="text"
           placeholder="Insert Pokemon"
           onChange={handleInputChange}
         />
 
-        {hasError && <div id='invalid-pokemon' className='invalid-search'>Invalid pokemon</div>}
+        {hasError && <div id='invalid-pokemon' className='invalid-search fw-medium'>Invalid pokemon</div>}
         <div type='button' id='pokeball' className='pokeball-bottom' onClick={() => searchPokemon(pokemonSearched.current)}></div>
         <div className="bottom-logo"></div>
       </div>
